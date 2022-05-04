@@ -15,7 +15,7 @@ const News = () => {
       </div>
       <div className="row">
         <div className="col-lg-4 px-3 mb-2">
-          <img className="img-fluid rounded" src={newsOne} alt="" />
+          <img className="img-fluid rounded news-img" src={newsOne} alt="" />
           <div>
             <h5 className="mt-3">3 great ways to design your bedroom</h5>
             <p>
@@ -34,8 +34,8 @@ const News = () => {
           </div>
         </div>
         <div className="col-lg-4 px-3 mb-2">
-          <img className="img-fluid rounded" src={newsTwo} alt="" />
-          <h4 className="mt-3">How to design a happy home</h4>
+          <img className="img-fluid rounded news-img" src={newsTwo} alt="" />
+          <h5 className="mt-3">How to design a happy home</h5>
           <p>
             <small>By Adam Smith, December 18, 2019</small>
           </p>
@@ -50,8 +50,8 @@ const News = () => {
           </p>
         </div>
         <div className="col-lg-4 px-3">
-          <img className="img-fluid rounded" src={newsThree} alt="" />
-          <h4 className="mt-3">Top tips for sustainable living</h4>
+          <img className="img-fluid rounded news-img" src={newsThree} alt="" />
+          <h5 className="mt-3">Top tips for sustainable living</h5>
           <p>
             <small>By Adam Smith, December 18, 2019</small>
           </p>

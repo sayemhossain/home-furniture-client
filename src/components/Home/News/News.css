@@ -3,3 +3,9 @@
   cursor: pointer;
   text-decoration: none;
 }
+.news-img {
+  transition: all 0.2s ease;
+}
+.news-img:hover {
+  transform: scale(0.9);
+}
