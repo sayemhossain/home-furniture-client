@@ -8,11 +8,11 @@ import "./Marketing.css";
 const Marketing = () => {
   return (
     <div className=" px-5 my-5">
-      <div className="row ">
-        <div className="col-lg-3 col-md-6 px-3">
+      <div className="row">
+        <div className="col-lg-3 col-md-6 px-3 content">
           <div className="row d-flex align-items-center">
             <div className="col-lg-3">
-              <img className="img-fluid" src={shipping} alt="" />
+              <img className="img-fluid m-img" src={shipping} alt="" />
             </div>
             <div className="col-lg-9">
               <h5>Free Shipping</h5>
@@ -22,10 +22,10 @@ const Marketing = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-6 px-3">
+        <div className="col-lg-3 col-md-6 px-3 content">
           <div className="row d-flex align-items-center">
             <div className="col-lg-3">
-              <img className="img-fluid" src={support} alt="" />
+              <img className="img-fluid m-img" src={support} alt="" />
             </div>
             <div className="col-lg-9">
               <h5>Support 24/7</h5>
@@ -35,10 +35,10 @@ const Marketing = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-6 px-3">
+        <div className="col-lg-3 col-md-6 px-3 content">
           <div className="row d-flex align-items-center">
             <div className="col-lg-3">
-              <img className="img-fluid" src={payment} alt="" />
+              <img className="img-fluid m-img" src={payment} alt="" />
             </div>
             <div className="col-lg-9">
               <h5>Secure Payment</h5>
@@ -48,10 +48,10 @@ const Marketing = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-6 px-3">
+        <div className="col-lg-3 col-md-6 px-3 content">
           <div className="row d-flex align-items-center">
             <div className="col-lg-3">
-              <img className="img-fluid" src={moneyback} alt="" />
+              <img className="img-fluid m-img" src={moneyback} alt="" />
             </div>
             <div className="col-lg-9">
               <h5>100% Moneyback</h5>
