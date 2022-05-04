@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Bodoni:ital@1&family=Oswald:wght@600&family=Poppins:wght@500&family=Square+Peg&family=Tapestry&family=Water+Brush&display=swap");
+/*
+font-family: 'Bebas Neue', cursive;
+font-family: 'Libre Bodoni', serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Square Peg', cursive;
+font-family: 'Tapestry', cursive;
+font-family: 'Water Brush', cursive;
+*/
+
 .home {
   background-color: #effafa;
   min-height: 90vh;
@@ -10,6 +21,9 @@
 .home-txt h5 {
   color: #ec8445;
 }
+.home-txt h1 {
+  font-family: "Bebas Neue", cursive;
+}
 .home-txt h1,
 p {
   color: #07274c;
@@ -18,6 +32,11 @@ p {
   background-color: #07274c;
   color: #ec8445;
   border: 1px solid #ec8445;
+  transition: all 0.3s ease;
+}
+.home-txt button:hover {
+  color: #ec8445;
+  transform: scale(1.1);
 }
 @media only screen and (max-width: 992px) {
   .home-txt {

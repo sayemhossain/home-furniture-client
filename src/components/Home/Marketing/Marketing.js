@@ -7,7 +7,7 @@ import "./Marketing.css";
 
 const Marketing = () => {
   return (
-    <div className=" px-5 my-5">
+    <div className="px-5 my-5">
       <div className="row">
         <div className="col-lg-3 col-md-6 px-3 content">
           <div className="row d-flex align-items-center">

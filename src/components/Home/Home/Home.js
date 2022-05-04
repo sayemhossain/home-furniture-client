@@ -4,6 +4,7 @@ import "./Home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Marketing from "../Marketing/Marketing";
+import News from "../News/News";
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
           <div className="row p-2">
             <div className="col-lg-6 home-txt">
               <h5>A watch is a portable</h5>
-              <h1 className="fs-1">Smart Furniture</h1>
+              <h1 className="fs-1 mt-2">Smart Furniture</h1>
               <p>
                 Experience the decibles like your ears deserve to Safe for the
                 ears, very for the heart.
@@ -32,6 +33,7 @@ const Home = () => {
         </div>
       </div>
       <Marketing></Marketing>
+      <News></News>
     </>
   );
 };
