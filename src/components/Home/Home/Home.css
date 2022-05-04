@@ -1,0 +1,21 @@
+.home {
+  background-color: #effafa;
+  min-height: 90vh;
+}
+.home-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-txt h5 {
+  color: #ec8445;
+}
+.home-txt h1,
+p {
+  color: #07274c;
+}
+.home-txt button {
+  background-color: #07274c;
+  color: #ec8445;
+  border: 1px solid #ec8445;
+}
