@@ -6,6 +6,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Marketing from "../Marketing/Marketing";
 import News from "../News/News";
 import Info from "../Info/Info";
+import Furnitures from "../../Furnitures/Furnitures";
 
 const Home = () => {
   return (
@@ -34,6 +35,7 @@ const Home = () => {
         </div>
       </div>
       <Marketing></Marketing>
+      <Furnitures></Furnitures>
       <Info></Info>
       <News></News>
     </>

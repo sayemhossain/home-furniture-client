@@ -1,49 +1,63 @@
 import React, { useState } from "react";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import googleImg from "../../images/google.svg";
+import "./Signup.css";
 import {
-  useSignInWithEmailAndPassword,
+  useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
-import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
-import googleImg from "../../images/google.svg";
-import "./Login.css";
+import { updateProfile } from "firebase/auth";
 
-const Login = () => {
+const Signup = () => {
   const [error, setError] = useState("");
-  const [signInWithEmailAndPassword, user, loading, loginerror] =
-    useSignInWithEmailAndPassword(auth);
-  const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
-  const location = useLocation();
+  const [createUserWithEmailAndPassword, user] =
+    useCreateUserWithEmailAndPassword(auth);
   const navigate = useNavigate();
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
 
-  let from = location.state?.from?.pathname || "/";
-  console.log(from);
-  const handleLogin = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
 
+    const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    if (loginerror) {
+    const cPassword = e.target.cpassword.value;
+
+    console.log(name, email, password, cPassword);
+    if (password != cPassword) {
       setError("Your password didn't match..!");
       return;
+    }
+    if (password.length < 6) {
+      setError("Password must be 6 characters");
+      return;
     } else {
-      signInWithEmailAndPassword(email, password);
+      createUserWithEmailAndPassword(email, password);
+      setError("");
     }
   };
-
   if (user || googleUser) {
-    navigate(from, { replace: true });
+    navigate("/");
   }
   return (
     <div className="login-body" style={{ minHeight: "90vh" }}>
       <div className="container py-5">
         <div className="w-50 mx-auto login-form">
           <h4 className="text-center text-uppercase my-4 login-header">
-            Login Please
+            Create an account
           </h4>
-          <form action="" onSubmit={handleLogin}>
+          <form action="" onSubmit={handleSignup}>
             <input
               className="form-control"
+              type="text"
+              name="name"
+              id=""
+              placeholder="Your name"
+            />
+            <input
+              className="form-control mt-4"
               type="email"
               name="email"
               id=""
@@ -56,18 +70,26 @@ const Login = () => {
               id=""
               placeholder="Your password"
             />
+            <input
+              className="form-control mt-4"
+              type="password"
+              name="cpassword"
+              id=""
+              placeholder="Confirm password"
+            />
+            {error}
             <div className="text-center mt-4">
               <input
                 className="w-100 login-btn py-2 fw-bold rounded"
                 type="submit"
-                value="Login"
+                value="Sign up"
               />
             </div>
           </form>
           <p className="text-center mt-2">
-            Don't have an account?{" "}
-            <Link to="/signup" className="signip-link">
-              Create an account
+            Already have an account?{" "}
+            <Link to="/login" className="login-link">
+              Login
             </Link>
           </p>
           <div className="d-flex justify-content-center px-5">
@@ -88,4 +110,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

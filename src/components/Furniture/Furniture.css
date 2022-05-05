@@ -1,0 +1,10 @@
+.img-container {
+  background-color: #fffdf5;
+}
+.card-body {
+  background-color: #f5fff5;
+}
+.card img {
+  width: 150px;
+  height: 120px;
+}

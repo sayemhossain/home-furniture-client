@@ -3,8 +3,15 @@ import { Link } from "react-router-dom";
 import CustomLink from "../CustomLink/CustomLink";
 import logo from "../../images/logo.png";
 import "./Header.css";
+import auth from "../../firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+  const [user, loading, error] = useAuthState(auth);
+  const handleSignOut = () => {
+    signOut(auth);
+  };
   return (
     <div>
       <nav className="navbar navbar-expand-md navbar-light navbar-bg py-2">
@@ -35,12 +42,12 @@ const Header = () => {
                 </CustomLink>
               </li>
               <li className="nav-item">
-                <CustomLink className="nav-link fs-5" to="/blogs">
+                <CustomLink className="nav-link fs-5" to="/addProduct">
                   Add product
                 </CustomLink>
               </li>
               <li className="nav-item">
-                <CustomLink className="nav-link fs-5" to="/blogs">
+                <CustomLink className="nav-link fs-5" to="/manage">
                   Manage
                 </CustomLink>
               </li>
@@ -50,15 +57,21 @@ const Header = () => {
                 </CustomLink>
               </li>
               <li className="nav-item">
-                <CustomLink className="nav-link fs-5" to="/blogs">
+                <CustomLink className="nav-link fs-5" to="/about">
                   About
                 </CustomLink>
               </li>
             </ul>
             <div className="text-center">
-              <Link to="/login" className="btn btn-danger px-3">
-                Login
-              </Link>
+              {user ? (
+                <button onClick={handleSignOut} className="btn btn-primary">
+                  Logout
+                </button>
+              ) : (
+                <Link to="/login" className="btn btn-danger px-3">
+                  Login
+                </Link>
+              )}
             </div>
           </div>
         </div>
