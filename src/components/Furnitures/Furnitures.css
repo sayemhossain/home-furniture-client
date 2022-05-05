@@ -6,6 +6,9 @@
 .sub-header {
   color: #ec8445;
 }
+.seeMore-link {
+  text-decoration: none;
+}
 @media only screen and (max-width: 992px) {
   .furniture-container {
     grid-template-columns: repeat(1, 1fr);

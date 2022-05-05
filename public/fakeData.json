@@ -78,5 +78,13 @@
       "description": "In quis ex Lorem reprehenderit in cillum veniam esse. Adipisicing tempor exercitation irure id. Dolore fugiat enim pariatur duis veniam commodo incididunt ullamco dolore consequat.",
       "quantity": 19.5,
       "supplierName": "Bradford Reese"
+    },{
+      "name": "Brown Sofa",
+      "price": "$435.38",
+      "img": "https://freepngimg.com/thumb/sofa/4-sofa-png-image-thumb.png",
+      "description": "In quis ex Lorem reprehenderit in cillum veniam esse. Adipisicing tempor exercitation irure id. Dolore fugiat enim pariatur duis veniam commodo incididunt ullamco dolore consequat.",
+      "quantity": 19.5,
+      "supplierName": "Rose Malik"
     }
   ]
+  
