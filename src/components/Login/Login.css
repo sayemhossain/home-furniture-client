@@ -1,0 +1,34 @@
+.login-body {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../images/house-home-studio-furniture.jpg);
+  background-size: cover;
+}
+.login-form {
+  border: 1px solid #07274c;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 3rem;
+  background-color: white;
+}
+.login-header {
+  color: #07274c;
+}
+.login-btn {
+  background-color: #07274c;
+  color: #ec8445;
+  border-style: none;
+  transition: all 0.3s ease;
+}
+.login-btn:hover {
+  background-color: #08111b;
+  color: #ec8445;
+  border-style: none;
+}
+.google-btn {
+  border: 1px solid #07274c;
+  color: #07274c;
+  margin-bottom: 1rem;
+}
+.signip-link {
+  color: #ec8445;
+}
