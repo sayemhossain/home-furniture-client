@@ -1,0 +1,15 @@
+.social-media img {
+  height: 50px;
+  cursor: pointer;
+}
+.social-media img:hover {
+  transform: scale(1.1);
+}
+.info-subheader {
+  color: #ec8445;
+  font-family: "Bebas Neue", cursive;
+}
+.info-header {
+  color: #07274c;
+  font-family: "Bebas Neue", cursive;
+}

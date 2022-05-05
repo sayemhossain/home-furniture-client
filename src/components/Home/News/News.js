@@ -1,7 +1,7 @@
 import React from "react";
-import newsOne from "../../../images/news/newsOne.jpg";
-import newsTwo from "../../../images/news/newsTwo.jpg";
-import newsThree from "../../../images/news/newsThree.jpg";
+import newsOne from "../../../images/news/extra/2.webp";
+import newsTwo from "../../../images/news/extra/1.webp";
+import newsThree from "../../../images/news/extra/6.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./News.css";
@@ -19,7 +19,7 @@ const News = () => {
           <div>
             <h5 className="mt-3">3 great ways to design your bedroom</h5>
             <p>
-              <small>By Adam Smith, December 18, 2019</small>
+              <small>By Adam Smith, December 18, 2021</small>
             </p>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
@@ -37,7 +37,7 @@ const News = () => {
           <img className="img-fluid rounded news-img" src={newsTwo} alt="" />
           <h5 className="mt-3">How to design a happy home</h5>
           <p>
-            <small>By Adam Smith, December 18, 2019</small>
+            <small>By Adam Smith, December 18, 2021</small>
           </p>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
@@ -53,7 +53,7 @@ const News = () => {
           <img className="img-fluid rounded news-img" src={newsThree} alt="" />
           <h5 className="mt-3">Top tips for sustainable living</h5>
           <p>
-            <small>By Adam Smith, December 18, 2019</small>
+            <small>By Adam Smith, December 18, 2021</small>
           </p>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur

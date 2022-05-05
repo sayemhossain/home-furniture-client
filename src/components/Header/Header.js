@@ -24,7 +24,7 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav m-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav m-auto mb-2 mb-lg-0 text-center">
               <li className="nav-item">
                 <CustomLink
                   className="nav-link fs-5"
@@ -55,7 +55,7 @@ const Header = () => {
                 </CustomLink>
               </li>
             </ul>
-            <div>
+            <div className="text-center">
               <Link to="/login" className="btn btn-danger px-3">
                 Login
               </Link>
