@@ -4,7 +4,23 @@
 .card-body {
   background-color: #f5fff5;
 }
+.custom-bg {
+  background-color: #07274c;
+}
 .card img {
   width: 150px;
   height: 120px;
+}
+.card-btn {
+  background-color: transparent;
+  border: 1px solid #07274c;
+  transition: all 0.2s ease;
+}
+.card-btn:hover {
+  transform: scale(1.1);
+  background-color: #fffdf5;
+}
+.card-info {
+  display: flex;
+  justify-content: space-between;
 }

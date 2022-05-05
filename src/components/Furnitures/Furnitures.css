@@ -3,3 +3,13 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
 }
+.sub-header {
+  color: #ec8445;
+}
+@media only screen and (max-width: 992px) {
+  .furniture-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
