@@ -33,7 +33,7 @@ const Furniture = ({ furniture }) => {
           <div>
             <div className="card-info">
               <div>
-                <p>price: {price}</p>
+                <p>price: ${price}</p>
               </div>
               <div>
                 <button

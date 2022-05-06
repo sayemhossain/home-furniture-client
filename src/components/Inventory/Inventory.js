@@ -41,7 +41,7 @@ const Inventory = () => {
           <div className="col-lg-8 px-5">
             <h4>Name: {name}</h4>
             <p className="my-0 py-0">
-              Price: <span className="text-danger">{price}</span>
+              Price: <span className="text-danger">${price}</span>
             </p>
             <p>Quantity: {quantity}</p>
             <h6 className="mb-0 pb-0">supplied by: {supplierName}</h6>

@@ -1,5 +1,7 @@
 import React from "react";
+import { toast, ToastContainer } from "react-toastify";
 import "./AddItem.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddItem = () => {
   const handleAddItem = (e) => {
@@ -22,6 +24,8 @@ const AddItem = () => {
     })
       .then((res) => res.json())
       .then((result) => console.log(result));
+    e.target.reset();
+    toast("Item added successfully!");
   };
   return (
     <div className="add-container">
@@ -90,6 +94,7 @@ const AddItem = () => {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

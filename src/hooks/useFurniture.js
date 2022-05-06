@@ -7,7 +7,7 @@ const useFurniture = () => {
     fetch("http://localhost:5000/furnitures")
       .then((res) => res.json())
       .then((data) => setFurnitures(data));
-  }, []);
+  }, [furnitures]);
   return [furnitures, setFurnitures];
 };
 export default useFurniture;
