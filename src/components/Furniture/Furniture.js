@@ -1,9 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Furniture.css";
 
 const Furniture = ({ furniture }) => {
-  const { name, img, price, description, quantity, supplierName } = furniture;
+  const { _id, name, img, price, description, quantity, supplierName } =
+    furniture;
+  const navigate = useNavigate();
+
+  const navigateToFurnitureDetails = () => {
+    navigate(`/furnitures/${_id}`);
+  };
   return (
     <div>
       <div class="card">
@@ -30,11 +36,12 @@ const Furniture = ({ furniture }) => {
                 <p>price: {price}</p>
               </div>
               <div>
-                <Link to="/inventory">
-                  <button className="card-btn py-1 rounded">
-                    Stock update
-                  </button>
-                </Link>
+                <button
+                  onClick={() => navigateToFurnitureDetails(_id)}
+                  className="card-btn py-1 rounded"
+                >
+                  Stock update
+                </button>
               </div>
             </div>
           </div>

@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import AllFurniture from "./components/AllFurniture/AllFurniture";
+import Inventory from "./components/Inventory/Inventory";
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
         <Route
           path="/allfurniture"
           element={<AllFurniture></AllFurniture>}
+        ></Route>
+        <Route
+          path="/furnitures/:furnitureId"
+          element={<Inventory></Inventory>}
         ></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
