@@ -1,6 +1,9 @@
 import React from "react";
 import useFurniture from "../../hooks/useFurniture";
 import Furniture from "../Furniture/Furniture";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const AllFurniture = () => {
   const [furnitures, setFurnitures] = useFurniture();
@@ -15,6 +18,14 @@ const AllFurniture = () => {
         {furnitures.map((furniture) => (
           <Furniture key={furniture._id} furniture={furniture}></Furniture>
         ))}
+      </div>
+      <div className="text-end my-5">
+        <p>
+          <Link className="inventory-link" to="/manage">
+            Manage Inventory
+            <FontAwesomeIcon className="ms-1" icon={faArrowRight} />
+          </Link>
+        </p>
       </div>
     </div>
   );

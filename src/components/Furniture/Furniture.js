@@ -8,7 +8,7 @@ const Furniture = ({ furniture }) => {
   const navigate = useNavigate();
 
   const navigateToFurnitureDetails = () => {
-    navigate(`/furnitures/${_id}`);
+    navigate(`/inventory/${_id}`);
   };
   return (
     <div>

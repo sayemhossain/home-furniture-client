@@ -48,9 +48,23 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <CustomLink className="nav-link fs-5" to="/manage">
-                  Manage
+                  Manage Inventory
                 </CustomLink>
               </li>
+              {user && (
+                <>
+                  <li className="nav-item">
+                    <CustomLink className="nav-link fs-5" to="/additem">
+                      Add Item
+                    </CustomLink>
+                  </li>
+                  <li className="nav-item">
+                    <CustomLink className="nav-link fs-5" to="/myitems">
+                      My Items
+                    </CustomLink>
+                  </li>
+                </>
+              )}
               <li className="nav-item">
                 <CustomLink className="nav-link fs-5" to="/blogs">
                   Blogs

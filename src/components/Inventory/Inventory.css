@@ -1,0 +1,6 @@
+.inventory-link {
+  color: black;
+}
+.inventory-link:hover {
+  color: rgb(240, 3, 3);
+}

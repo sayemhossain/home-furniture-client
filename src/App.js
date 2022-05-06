@@ -12,6 +12,8 @@ import Signup from "./components/Signup/Signup";
 import AllFurniture from "./components/AllFurniture/AllFurniture";
 import Inventory from "./components/Inventory/Inventory";
 import RequireAuth from "./components/RequireAuth/RequireAuth";
+import ManageInventory from "./components/ManageInventory/ManageInventory";
+import AddItem from "./components/AddItem/AddItem";
 
 function App() {
   return (
@@ -25,10 +27,26 @@ function App() {
           element={<AllFurniture></AllFurniture>}
         ></Route>
         <Route
-          path="/furnitures/:furnitureId"
+          path="/inventory/:furnitureId"
           element={
             <RequireAuth>
               <Inventory></Inventory>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/manage"
+          element={
+            <RequireAuth>
+              <ManageInventory></ManageInventory>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/additem"
+          element={
+            <RequireAuth>
+              <AddItem></AddItem>
             </RequireAuth>
           }
         ></Route>
