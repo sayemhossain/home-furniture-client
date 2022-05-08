@@ -8,11 +8,13 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { updateProfile } from "firebase/auth";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Signup = () => {
   const [error, setError] = useState("");
   const [createUserWithEmailAndPassword, user] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const navigate = useNavigate();
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
@@ -36,6 +38,7 @@ const Signup = () => {
     } else {
       createUserWithEmailAndPassword(email, password);
       setError("");
+      toast("Email Verification send");
     }
   };
   if (user || googleUser) {
@@ -105,6 +108,7 @@ const Signup = () => {
             </button>
           </div>
         </div>
+        <ToastContainer></ToastContainer>
       </div>
     </div>
   );

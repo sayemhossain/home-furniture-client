@@ -1,23 +1,27 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import {
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../../firebase.init";
 import googleImg from "../../images/google.svg";
 import "./Login.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
+  const emailRef = useRef("");
   const [error, setError] = useState("");
   const [signInWithEmailAndPassword, user, loading, loginerror] =
     useSignInWithEmailAndPassword(auth);
   const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
   const location = useLocation();
   const navigate = useNavigate();
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
   let from = location.state?.from?.pathname || "/";
-  console.log(from);
   const handleLogin = (e) => {
     e.preventDefault();
 
@@ -30,7 +34,12 @@ const Login = () => {
       signInWithEmailAndPassword(email, password);
     }
   };
-
+  // this is for reset password
+  const handleResetPassword = () => {
+    const email = emailRef.current.value;
+    sendPasswordResetEmail(email);
+    toast("Sent Email");
+  };
   if (user || googleUser) {
     navigate(from, { replace: true });
   }
@@ -56,6 +65,20 @@ const Login = () => {
               id=""
               placeholder="Your password"
             />
+            {error}
+            {error ? (
+              <p>
+                Forgot password?
+                <span
+                  className="text-primary ms-1"
+                  onClick={() => handleResetPassword()}
+                >
+                  Reset Password
+                </span>
+              </p>
+            ) : (
+              ""
+            )}
             <div className="text-center mt-4">
               <input
                 className="w-100 login-btn py-2 fw-bold rounded"
@@ -84,6 +107,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
