@@ -12,19 +12,24 @@ const Furniture = ({ furniture }) => {
   };
   return (
     <div>
-      <div class="card" style={{ height: "25rem" }}>
+      <div className="card" style={{ height: "25rem" }}>
         <div className="img-container text-center p-3">
-          <img className="img-fluid" src={img} class="card-img-top" alt="..." />
+          <img
+            className="img-fluid"
+            src={img}
+            className="card-img-top"
+            alt="..."
+          />
         </div>
-        <div class="card-body p-3">
-          <h5 class="card-title">
+        <div className="card-body p-3">
+          <h5 className="card-title">
             {name}
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill custom-bg">
+            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill custom-bg">
               {quantity}
-              <span class="visually-hidden">unread messages</span>
+              <span className="visually-hidden">unread messages</span>
             </span>
           </h5>
-          <p class="card-text">
+          <p className="card-text">
             {description.length > 150
               ? description.slice(0, 150) + "..."
               : description}

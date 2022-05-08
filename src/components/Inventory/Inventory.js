@@ -18,7 +18,7 @@ const Inventory = () => {
     const restock = e.target.restock.value;
     const newQuantity = parseInt(quantity) + parseInt(restock);
 
-    // send data to the server
+    // send data to the server for updating the quantiry
     const url = `http://localhost:5000/furnitures/${_id}`;
     fetch(url, {
       method: "PUT",

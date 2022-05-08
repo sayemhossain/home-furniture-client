@@ -38,7 +38,7 @@ const Manage = ({ furniture }) => {
           </p>
         </div>
         <div className="col-lg-2">
-          <button class="btn btn-outline-success">Update</button>
+          <button className="btn btn-outline-success">Update</button>
         </div>
         <div className="col-lg-2">
           <button
