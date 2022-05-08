@@ -1,27 +1,25 @@
 import React from "react";
-import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import useFurnitureDetails from "../../hooks/useFurnitureDetails";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./Inventory.css";
+import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from "react-toastify";
 
 const Inventory = () => {
   const furnitureId = useParams();
   const [furniture] = useFurnitureDetails(furnitureId);
   let { _id, name, img, price, description, quantity, supplierName } =
     furniture;
-  const [updatedQuantity, setUpdatedQuantity] = useState([]);
 
   const handleUpdateQuantity = (e) => {
     e.preventDefault();
     const restock = e.target.restock.value;
     const newQuantity = parseInt(quantity) + parseInt(restock);
-    console.log(newQuantity);
 
     // send data to the server
     const url = `http://localhost:5000/furnitures/${_id}`;
-    console.log(url);
     fetch(url, {
       method: "PUT",
       headers: {
@@ -30,7 +28,7 @@ const Inventory = () => {
       body: JSON.stringify({ newQuantity }),
     })
       .then((res) => res.json())
-      .then((data) => setUpdatedQuantity(data));
+      .then((data) => toast("Quantity Updated"));
     e.target.reset();
   };
 
@@ -78,6 +76,7 @@ const Inventory = () => {
           </p>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
