@@ -13,10 +13,26 @@ const Inventory = () => {
   let { _id, name, img, price, description, quantity, supplierName } =
     furniture;
 
+  const handleDeliverQuantity = () => {
+    const deliverQuantity = parseInt(quantity) - 1;
+    console.log(deliverQuantity);
+    const x = 2;
+    const url = `http://localhost:5000/furnitures/${_id}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ deliverQuantity, x }),
+    })
+      .then((res) => res.json())
+      .then((data) => toast("Delivered"));
+  };
   const handleUpdateQuantity = (e) => {
     e.preventDefault();
     const restock = e.target.restock.value;
     const newQuantity = parseInt(quantity) + parseInt(restock);
+    const x = 1;
 
     // send data to the server for updating the quantiry
     const url = `http://localhost:5000/furnitures/${_id}`;
@@ -25,7 +41,7 @@ const Inventory = () => {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({ newQuantity }),
+      body: JSON.stringify({ newQuantity, x }),
     })
       .then((res) => res.json())
       .then((data) => toast("Quantity Updated"));
@@ -47,7 +63,9 @@ const Inventory = () => {
             <p>Quantity: {quantity}</p>
             <h6 className="mb-0 pb-0">supplied by: {supplierName}</h6>
             <p>{description}</p>
-            <button className="btn btn-danger">Delivered</button>
+            <button onClick={handleDeliverQuantity} className="btn btn-danger">
+              Delivered
+            </button>
             <div className="mt-3">
               <h5>Restock the items</h5>
               <form action="" onSubmit={handleUpdateQuantity}>
