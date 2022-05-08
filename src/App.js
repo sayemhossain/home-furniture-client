@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home/Home";
-import Products from "./components/Home/Products/Products";
 import Blogs from "./components/Blogs/Blogs";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/Login/Login";
@@ -15,6 +14,8 @@ import RequireAuth from "./components/RequireAuth/RequireAuth";
 import ManageInventory from "./components/ManageInventory/ManageInventory";
 import AddItem from "./components/AddItem/AddItem";
 import NotFound from "./components/NotFound/NotFound";
+import MyItems from "./components/MyItems/MyItems";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -51,7 +52,16 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route
+          path="/myitems"
+          element={
+            <RequireAuth>
+              <MyItems></MyItems>
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
