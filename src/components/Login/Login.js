@@ -10,6 +10,8 @@ import auth from "../../firebase.init";
 import googleImg from "../../images/google.svg";
 import "./Login.css";
 import "react-toastify/dist/ReactToastify.css";
+import { async } from "@firebase/util";
+import axios from "axios";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -22,7 +24,7 @@ const Login = () => {
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
   let from = location.state?.from?.pathname || "/";
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
     const email = e.target.email.value;
@@ -31,7 +33,12 @@ const Login = () => {
       setError("Your password didn't match..!");
       return;
     } else {
-      signInWithEmailAndPassword(email, password);
+      await signInWithEmailAndPassword(email, password);
+      const { data } = await axios.post("http://localhost:5000/login", {
+        email,
+      });
+      localStorage.setItem("accessToken", data);
+      navigate(from, { replace: true });
     }
   };
   // this is for reset password
