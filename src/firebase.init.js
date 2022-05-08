@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDPt-6a17oTjAwxyZFwBalczbWvnziIF7Q",
-  authDomain: "home-furniture-279d6.firebaseapp.com",
-  projectId: "home-furniture-279d6",
-  storageBucket: "home-furniture-279d6.appspot.com",
-  messagingSenderId: "661689095372",
-  appId: "1:661689095372:web:8b65ec527bd013d3d75e69",
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase

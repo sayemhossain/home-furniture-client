@@ -8,8 +8,11 @@ const useFurniture = () => {
     setLoading(true);
     fetch("http://localhost:5000/furnitures")
       .then((res) => res.json())
-      .then((data) => setFurnitures(data));
+      .then((data) => {
+        setFurnitures(data);
+        setLoading(false);
+      });
   }, [furnitures]);
-  return [furnitures, setFurnitures, loading];
+  return [furnitures, setFurnitures, loading, setLoading];
 };
 export default useFurniture;
