@@ -1,6 +1,6 @@
 import React from "react";
 import "./Info.css";
-import infoImg from "../../../images/news/extra/1.webp";
+import extraImg from "../../../images/extraImg.webp";
 import facebook from "../../../images/social-media/facebook-icon.png";
 import instagram from "../../../images/social-media/instagram-icon.png";
 import linkedin from "../../../images/social-media/linkedin-icon.png";
@@ -12,7 +12,7 @@ const Info = () => {
     <div className="container py-5">
       <div className="row">
         <div className="col-lg-5">
-          <img src={infoImg} alt="" />
+          <img className="img-fluid" src={extraImg} alt="" />
         </div>
         <div className="col-lg-7">
           <h4 className="info-subheader">Home Furniture wirehouse,</h4>
