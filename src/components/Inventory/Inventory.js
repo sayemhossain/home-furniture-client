@@ -16,10 +16,9 @@ const Inventory = () => {
   const handleUpdateQuantity = (e) => {
     e.preventDefault();
     const restock = e.target.restock.value;
-    const newQuentiry = parseInt(quantity) + parseInt(restock);
-    console.log(newQuentiry);
-    const user = { newQuentiry };
-    console.log(user);
+    const newQuantity = parseInt(quantity) + parseInt(restock);
+    console.log(newQuantity);
+
     // send data to the server
     const url = `http://localhost:5000/furnitures/${_id}`;
     console.log(url);
@@ -28,7 +27,7 @@ const Inventory = () => {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(user),
+      body: JSON.stringify({ newQuantity }),
     })
       .then((res) => res.json())
       .then((data) => setUpdatedQuantity(data));
