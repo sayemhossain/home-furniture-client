@@ -16,15 +16,19 @@ const Inventory = () => {
   const handleUpdateQuantity = (e) => {
     e.preventDefault();
     const restock = e.target.restock.value;
-    const newQuentiry = quantity + parseInt(restock);
+    const newQuentiry = parseInt(quantity) + parseInt(restock);
     console.log(newQuentiry);
+    const user = { newQuentiry };
+    console.log(user);
     // send data to the server
-    fetch(`http://localhost:5000/furnitures/${furnitureId}`, {
+    const url = `http://localhost:5000/furnitures/${_id}`;
+    console.log(url);
+    fetch(url, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({ newQuentiry }),
+      body: JSON.stringify(user),
     })
       .then((res) => res.json())
       .then((data) => setUpdatedQuantity(data));

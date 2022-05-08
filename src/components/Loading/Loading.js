@@ -2,11 +2,19 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div
-      className="spinner-border text-primary d-flex align-items-center justify-content-center"
-      role="status"
-    >
-      <span class="visually-hidden">Loading...</span>
+    <div style={{ minHeight: "90vh" }}>
+      <div
+        style={{ minHeight: "70vh" }}
+        className="d-flex justify-content-center align-items-center "
+      >
+        <div
+          className="spinner-grow text-primary"
+          style={{ width: "3rem", height: "3rem" }}
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
     </div>
   );
 };

@@ -12,7 +12,7 @@ const Furniture = ({ furniture }) => {
   };
   return (
     <div>
-      <div class="card">
+      <div class="card" style={{ height: "25rem" }}>
         <div className="img-container text-center p-3">
           <img className="img-fluid" src={img} class="card-img-top" alt="..." />
         </div>
