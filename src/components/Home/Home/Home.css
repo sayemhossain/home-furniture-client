@@ -38,6 +38,12 @@ p {
   color: #ec8445;
   transform: scale(1.1);
 }
+.offer img {
+  transition: all ease-in-out 1s;
+}
+.offer img:hover {
+  transform: scale(1.1);
+}
 @media only screen and (max-width: 992px) {
   .home-txt {
     margin-top: 4rem;

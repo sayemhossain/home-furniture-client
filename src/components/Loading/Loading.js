@@ -7,12 +7,8 @@ const Loading = () => {
         style={{ minHeight: "70vh" }}
         className="d-flex justify-content-center align-items-center "
       >
-        <div
-          className="spinner-grow text-primary"
-          style={{ width: "3rem", height: "3rem" }}
-          role="status"
-        >
-          <span className="visually-hidden">Loading...</span>
+        <div class="spinner-border text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
         </div>
       </div>
     </div>

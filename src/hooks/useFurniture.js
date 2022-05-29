@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 
 const useFurniture = () => {
   const [furnitures, setFurnitures] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
-    fetch("http://localhost:5000/furnitures")
+    fetch("https://lit-brook-11922.herokuapp.com/furnitures")
       .then((res) => res.json())
       .then((data) => {
         setFurnitures(data);

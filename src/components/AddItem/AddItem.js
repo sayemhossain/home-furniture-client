@@ -14,7 +14,7 @@ const AddItem = () => {
     const description = e.target.description.value;
 
     const data = { name, supplierName, price, quantity, img, description };
-    const url = `http://localhost:5000/furnitures`;
+    const url = `https://lit-brook-11922.herokuapp.com/furnitures`;
     fetch(url, {
       method: "POST",
       headers: {

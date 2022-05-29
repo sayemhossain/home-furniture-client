@@ -8,7 +8,7 @@ const Manage = ({ furniture }) => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `http://localhost:5000/furnitures/${id}`;
+      const url = `https://lit-brook-11922.herokuapp.com/furnitures/${id}`;
       fetch(url, { method: "DELETE" })
         .then((res) => res.json())
         .then((data) => {

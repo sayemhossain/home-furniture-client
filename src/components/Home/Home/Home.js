@@ -7,6 +7,7 @@ import Marketing from "../Marketing/Marketing";
 import News from "../News/News";
 import Info from "../Info/Info";
 import Furnitures from "../../Furnitures/Furnitures";
+import offer from "../../../images/home7-fullbanner.webp";
 
 const Home = () => {
   return (
@@ -36,6 +37,9 @@ const Home = () => {
       </div>
       <Marketing></Marketing>
       <Furnitures></Furnitures>
+      <div className="offer">
+        <img className="img-fluid" src={offer} alt="" />
+      </div>
       <Info></Info>
       <News></News>
     </>

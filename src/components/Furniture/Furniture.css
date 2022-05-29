@@ -1,8 +1,15 @@
+.card {
+  border-radius: 15px;
+  border-style: none;
+  box-shadow: 10px 10px 10px rgb(240, 237, 237),
+    -10px -10px 10px rgb(241, 241, 240);
+}
+
 .img-container {
-  background-color: #fffdf5;
+  background-color: #f6f6f6;
 }
 .card-body {
-  background-color: #f5fff5;
+  background-color: #f6f6f6;
 }
 .custom-bg {
   background-color: #07274c;
@@ -14,7 +21,7 @@
 .card-btn {
   background-color: transparent;
   border: 1px solid #07274c;
-  transition: all 0.2s ease;
+  transition: all 0.6s ease;
 }
 .card-btn:hover {
   transform: scale(1.1);

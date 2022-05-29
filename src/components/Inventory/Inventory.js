@@ -17,7 +17,7 @@ const Inventory = () => {
     const deliverQuantity = parseInt(quantity) - 1;
     console.log(deliverQuantity);
     const x = 2;
-    const url = `http://localhost:5000/furnitures/${_id}`;
+    const url = `https://lit-brook-11922.herokuapp.com/furnitures/${_id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -35,7 +35,7 @@ const Inventory = () => {
     const x = 1;
 
     // send data to the server for updating the quantiry
-    const url = `http://localhost:5000/furnitures/${_id}`;
+    const url = `https://lit-brook-11922.herokuapp.com/furnitures/${_id}`;
     fetch(url, {
       method: "PUT",
       headers: {

@@ -9,7 +9,7 @@ const ManageInventory = () => {
   const [furnitures, useFurnitures] = useFurniture();
 
   return (
-    <div className="py-5 inventory-container">
+    <div className="py-5 inventory-container" style={{ height: "100vh" }}>
       <div className="container ">
         <div className="text-center">
           <p className="mb-0 pb-0 sub-header">EXPLORE THE AWESOME</p>
