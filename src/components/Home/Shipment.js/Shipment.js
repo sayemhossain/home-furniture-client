@@ -15,21 +15,20 @@ const Shipment = () => {
         <div className="row my-3 mb-5">
           <div className="col-lg-6">
             <h2 className="shipment-heading">
-              Delivering the Best Global <br></br> Logistics Solutions.
+              Delivering the Best Global <br></br> home furnitures.
             </h2>
           </div>
           <div className="col-lg-6">
             {" "}
             <p className="shipment-pera">
-              Our global logistics expertise, advanced supply chain technology &
-              customized logistics solutions will help you analyze, develop and
-              implement successful supply chain management strategies from
-              end-to-end.
+              Our global Furniture expertise, advanced supply technology &
+              customized home furnitures will help you analyze, develop and
+              implement successful supply in your home from end-to-end.
             </p>
           </div>
         </div>
-        <div className="row">
-          <div className="col-lg-4">
+        <div className="row px-2">
+          <div className="col-lg-4 my-2">
             <div class="card shipment-card px-2 py-5 ">
               <div className="text-center">
                 <img
@@ -52,7 +51,7 @@ const Shipment = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 my-2">
             <div class="card shipment-card px-2 py-5">
               <div className="text-center">
                 <img
@@ -74,7 +73,7 @@ const Shipment = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 my-2 ">
             <div class="card px-2 py-5 shipment-card">
               <div className="text-center">
                 <img
