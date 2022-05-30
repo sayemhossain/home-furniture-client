@@ -1,15 +1,14 @@
 .card {
   border-radius: 15px;
   border-style: none;
-  box-shadow: 10px 10px 10px rgb(240, 237, 237),
-    -10px -10px 10px rgb(241, 241, 240);
+  box-shadow: 5px 5px 10px rgb(196, 196, 196);
 }
 
 .img-container {
   background-color: #f6f6f6;
 }
 .card-body {
-  background-color: #f6f6f6;
+  background-color: ffffff;
 }
 .custom-bg {
   background-color: #07274c;
@@ -25,7 +24,8 @@
 }
 .card-btn:hover {
   transform: scale(1.1);
-  background-color: #fffdf5;
+  background-color: #07274c;
+  color: white;
 }
 .card-info {
   display: flex;

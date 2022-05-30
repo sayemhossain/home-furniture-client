@@ -8,6 +8,7 @@ import News from "../News/News";
 import Info from "../Info/Info";
 import Furnitures from "../../Furnitures/Furnitures";
 import offer from "../../../images/home7-fullbanner.webp";
+import Band from "../Band/Band";
 
 const Home = () => {
   return (
@@ -42,6 +43,7 @@ const Home = () => {
       </div>
       <Info></Info>
       <News></News>
+      <Band></Band>
     </>
   );
 };

@@ -14,7 +14,7 @@ const Info = () => {
         <div className="col-lg-5">
           <img className="img-fluid" src={extraImg} alt="" />
         </div>
-        <div className="col-lg-7">
+        <div className="col-lg-7 mt-3">
           <h4 className="info-subheader">Home Furniture wirehouse,</h4>
           <h1 className="info-header">A place you find everything</h1>
           <p>

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const AllFurniture = () => {
   const [furnitures, setFurnitures] = useFurniture();
   return (
-    <div className="container my-5" style={{ height: "100vh" }}>
+    <div className="container my-5" style={{ minHeight: "100vh" }}>
       <div className="text-center">
         <p className="mb-0 pb-0 sub-header">EXPLORE THE AWESOME</p>
         <h2>Featured Collections</h2>

@@ -12,7 +12,7 @@ const Furnitures = () => {
   return (
     <div className="container my-5">
       <div className="text-center">
-        <p className="mb-0 pb-0 sub-header">EXPLORE THE AWESOME</p>
+        <p className="mb-0 pb-0 sub-header">EXPLORe THE AWESOME</p>
         <h2>Featured Collections</h2>
         <p className="mb-5">Total Furniture: {homeFurniture.length}</p>
       </div>
