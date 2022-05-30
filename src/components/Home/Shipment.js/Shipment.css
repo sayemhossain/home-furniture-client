@@ -1,0 +1,11 @@
+.shipment-card img {
+  height: 60px;
+  width: 80px;
+}
+.shipment-heading {
+  color: #07274c;
+  font-weight: bold;
+}
+.shipment-pera {
+  color: rgb(114, 114, 114);
+}
