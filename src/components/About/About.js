@@ -1,10 +1,10 @@
 import React from "react";
-import Shipment from "../Home/Shipment.js/Shipment";
+import Mission from "../Home/Mission/Mission";
 
 const About = () => {
   return (
-    <div>
-      <Shipment></Shipment>
+    <div style={{ minHeight: "90vh" }}>
+      <Mission></Mission>
     </div>
   );
 };

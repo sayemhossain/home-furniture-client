@@ -1,0 +1,11 @@
+.mission-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mission-text h2 {
+  color: #07274c;
+}
+.mission-text h4 {
+  color: #ec8445;
+}
