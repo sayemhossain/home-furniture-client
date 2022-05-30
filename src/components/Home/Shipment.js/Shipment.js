@@ -42,9 +42,12 @@ const Shipment = () => {
               <div class="card-body text-center">
                 <h5 class="card-title">Air Freight</h5>
                 <p class="card-text">
-                  We can arrange and provides with the comprehensive service in
-                  the sphere of urgent, valuable, fragile or any cargoes
-                  conscientious accelerated delivery by air.
+                  <small>
+                    {" "}
+                    We can arrange and provides with the comprehensive service
+                    in the sphere of urgent, valuable, fragile or any cargoes
+                    conscientious accelerated delivery by air.
+                  </small>
                 </p>
               </div>
             </div>
@@ -62,9 +65,11 @@ const Shipment = () => {
               <div class="card-body text-center">
                 <h5 class="card-title">Ocean Freight</h5>
                 <p class="card-text">
-                  We provides with the main types of basic conditions
-                  International sea transportation is implemented by our
-                  partners’ vessels, the largest ocean carriers.
+                  <small>
+                    We provides with the main types of basic conditions
+                    International sea transportation is implemented by our
+                    partners’ vessels, the largest ocean carriers.
+                  </small>
                 </p>
               </div>
             </div>
@@ -82,9 +87,11 @@ const Shipment = () => {
               <div class="card-body text-center">
                 <h5 class="card-title">Road Freight</h5>
                 <p class="card-text">
-                  We provides a wide range of transportation services including
-                  quality international road transportation of cargoes & goods
-                  arriving from the ports all over the world.
+                  <small>
+                    We provides a wide range of transportation services
+                    including quality international road transportation of
+                    cargoes & goods arriving from the ports all over the world.
+                  </small>
                 </p>
               </div>
             </div>
