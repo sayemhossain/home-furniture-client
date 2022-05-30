@@ -9,6 +9,7 @@ import Info from "../Info/Info";
 import Furnitures from "../../Furnitures/Furnitures";
 import offer from "../../../images/home7-fullbanner.webp";
 import Band from "../Band/Band";
+import Shipment from "../Shipment.js/Shipment";
 
 const Home = () => {
   return (
@@ -42,6 +43,7 @@ const Home = () => {
         <img className="img-fluid" src={offer} alt="" />
       </div>
       <Info></Info>
+      <Shipment></Shipment>
       <News></News>
       <Band></Band>
     </>
