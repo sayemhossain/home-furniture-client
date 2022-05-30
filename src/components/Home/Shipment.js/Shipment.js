@@ -31,12 +31,14 @@ const Shipment = () => {
         <div className="row">
           <div className="col-lg-4">
             <div class="card shipment-card px-2 py-5 ">
-              <img
-                className="img-fluid text-center"
-                src={shipment1}
-                class="card-img-top"
-                alt="..."
-              />
+              <div className="text-center">
+                <img
+                  className="img-fluid"
+                  src={shipment1}
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
               <div class="card-body text-center">
                 <h5 class="card-title">Air Freight</h5>
                 <p class="card-text">
