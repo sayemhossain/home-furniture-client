@@ -1,0 +1,11 @@
+.question-icon-container {
+  margin-top: -23px;
+  text-align: center;
+}
+.question-icon {
+  background-color: #b0fafa;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: black;
+}

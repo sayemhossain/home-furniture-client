@@ -11,6 +11,7 @@ import offer from "../../../images/home7-fullbanner.webp";
 import Band from "../Band/Band";
 import Shipment from "../Shipment.js/Shipment";
 import Mission from "../Mission/Mission";
+import Question from "../Question/Question";
 
 const Home = () => {
   return (
@@ -47,6 +48,7 @@ const Home = () => {
       <Shipment></Shipment>
       <News></News>
       <Mission></Mission>
+      <Question></Question>
     </>
   );
 };
