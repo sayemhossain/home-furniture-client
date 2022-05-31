@@ -3,9 +3,21 @@
   text-align: center;
 }
 .question-icon {
-  background-color: #b0fafa;
+  background-color: #effafa;
   padding: 20px;
   border-radius: 50%;
-  font-size: 20px;
-  color: black;
+  font-size: 25px;
+  color: rgb(31, 28, 28);
+}
+.question-card {
+  border-radius: 10px;
+}
+.card-text {
+  color: rgb(114, 114, 114);
+}
+@media only screen and (max-width: 992px) {
+  .special-card {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }

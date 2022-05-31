@@ -11,7 +11,7 @@ const News = () => {
     <div className="container my-5">
       <div className="text-center">
         <h2>News & Updates</h2>
-        <hr className="w-50 mx-auto mb-5" />
+        <hr className="w-25 mx-auto mb-5" />
       </div>
       <div className="row">
         <div className="col-lg-4 px-3 mb-2">

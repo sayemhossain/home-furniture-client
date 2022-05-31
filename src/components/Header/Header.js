@@ -14,7 +14,7 @@ const Header = () => {
   };
   return (
     <div>
-      <nav className="navbar navbar-expand-md navbar-light navbar-bg py-2">
+      <nav className="navbar fixed-top navbar-expand-lg navbar-light navbar-bg py-2">
         <div className="container">
           <Link className="navbar-brand" to="/">
             <img className="img-fuild logo" src={logo} alt="" />
