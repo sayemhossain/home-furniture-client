@@ -8,3 +8,9 @@
   font-family: "Bebas Neue", cursive;
   margin-right: 5px;
 }
+.logout {
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(211, 208, 208);
+  background-color: transparent;
+  color: rgb(46, 45, 45);
+}

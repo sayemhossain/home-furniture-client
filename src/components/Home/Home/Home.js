@@ -12,11 +12,12 @@ import Band from "../Band/Band";
 import Shipment from "../Shipment.js/Shipment";
 import Mission from "../Mission/Mission";
 import Question from "../Question/Question";
+import SmallBanner from "../SmallBanner.js/SmallBanner";
 
 const Home = () => {
   return (
     <>
-      <div className="home">
+      <div className="home" style={{ minHeight: "100vh" }}>
         <div className="container">
           <div className="row p-2">
             <div className="col-lg-6 home-txt">
@@ -49,6 +50,7 @@ const Home = () => {
       <News></News>
       <Mission></Mission>
       <Question></Question>
+      <SmallBanner></SmallBanner>
     </>
   );
 };

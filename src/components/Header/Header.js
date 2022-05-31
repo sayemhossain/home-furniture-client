@@ -6,6 +6,8 @@ import "./Header.css";
 import auth from "../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightFromBracket, faUser } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -78,11 +80,15 @@ const Header = () => {
             </ul>
             <div className="text-center">
               {user ? (
-                <button onClick={handleSignOut} className="btn btn-primary">
-                  Logout
+                <button onClick={handleSignOut} className="logout">
+                  <FontAwesomeIcon
+                    className="me-1"
+                    icon={faUser}
+                  ></FontAwesomeIcon>
+                  Log out
                 </button>
               ) : (
-                <Link to="/login" className="btn btn-danger px-3">
+                <Link to="/login" className="btn btn-success px-4">
                   Login
                 </Link>
               )}
