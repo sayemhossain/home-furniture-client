@@ -9,8 +9,10 @@
   margin-right: 5px;
 }
 .logout {
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px rgb(211, 208, 208);
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: 10px 10px 50px rgb(211, 208, 208),
+    -10px -10px 50px rgb(211, 208, 208);
   background-color: transparent;
-  color: rgb(46, 45, 45);
+  color: rgb(71, 71, 71);
 }
