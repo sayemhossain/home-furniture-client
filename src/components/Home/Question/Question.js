@@ -10,7 +10,7 @@ import questionCover from "../../../images/question-cover.jpg";
 
 const Question = () => {
   return (
-    <div className="question-container py-3">
+    <div className="question-container">
       <div className="my-5 container">
         <div className="text-center">
           <p className="my-0 py-0">FAQ</p>
