@@ -15,8 +15,14 @@ import AddItem from "./components/AddItem/AddItem";
 import NotFound from "./components/NotFound/NotFound";
 import MyItems from "./components/MyItems/MyItems";
 import About from "./components/About/About";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div>
       <Header></Header>

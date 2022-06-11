@@ -20,7 +20,12 @@ const Home = () => {
       <div className="home" style={{ minHeight: "100vh" }}>
         <div className="container">
           <div className="row p-2">
-            <div className="col-lg-6 home-txt">
+            <div
+              className="col-lg-6 home-txt"
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay="300"
+            >
               <h5>A watch is a portable</h5>
               <h1 className="fs-1 mt-2">Smart Furniture</h1>
               <p>
@@ -34,7 +39,12 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div
+              className="col-lg-6"
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay="300"
+            >
               <img className="img-fluid" src={homeImg} alt="" />
             </div>
           </div>
