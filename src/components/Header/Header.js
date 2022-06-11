@@ -67,11 +67,7 @@ const Header = () => {
                   </li>
                 </>
               )}
-              <li className="nav-item">
-                <CustomLink className="nav-link fs-5" to="/blogs">
-                  Blogs
-                </CustomLink>
-              </li>
+
               <li className="nav-item">
                 <CustomLink className="nav-link fs-5" to="/about">
                   About
